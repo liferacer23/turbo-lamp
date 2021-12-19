@@ -1,6 +1,6 @@
 import React from 'react'
-
-export default function Episode(res) {
+import "../App.css";
+export default function Episode() {
     return (
         <div className='episode'>
             <div className='title'>

@@ -1,9 +1,10 @@
-import Episodes from './Episodes';
+import Episodes from "./Episodes";
+import { useState } from "react";
 import {BsFillHeartFill} from 'react-icons/bs'
 import {GrFormNextLink} from 'react-icons/gr'
 import '../App.css';
 export default function Item({flip,res}) {
-
+    const [state,setState]=useState(false);
     return (
        
         <div className={`item ${flip ? 'dark-background' : ''}`}>
@@ -25,12 +26,12 @@ export default function Item({flip,res}) {
                         <h6>{res.origin.type}</h6>
                     </div>
                 </div>
-                <div className='episodes-button'>
+                <div onClick={()=>{setState(!state)}} className='episodes-button'>
                     <h6>See Episodes</h6>
                     <span><GrFormNextLink /></span>
                 </div>
             </div>
-            
+            {state?<Episodes flip={flip} state={state}setState={setState} res={res}/>:null}
         </div>
         
     )

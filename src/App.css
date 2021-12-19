@@ -1,9 +1,9 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-.nav-bar{
+.nav-bar {
   height: 10vh;
   width: 100vw;
   display: flex;
@@ -12,18 +12,18 @@
   padding: 0.5rem 1rem;
   transition: 1s;
 }
-.logo{
+.logo {
   height: 100%;
   width: 13%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.logo img{
+.logo img {
   width: 100%;
   height: 100%;
 }
-.search-bar-container{
+.search-bar-container {
   width: 50%;
   height: 75%;
   display: flex;
@@ -31,7 +31,7 @@
   justify-content: center;
   background-color: rgb(240, 231, 231);
   border-radius: 0.5rem;
-  border:1px solid rgb(202, 196, 196)
+  border: 1px solid rgb(202, 196, 196);
 }
 .search-bar-container input {
   width: 95%;
@@ -43,7 +43,7 @@
   background-color: transparent;
   font-size: 1rem;
 }
-.search-bar-container .search-button{
+.search-bar-container .search-button {
   width: 5%;
   height: 100%;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -53,11 +53,11 @@
   align-items: center;
   justify-content: center;
 }
-.search-bar-container .search-button span{
+.search-bar-container .search-button span {
   font-size: 1.3rem;
   color: black;
 }
-.dark-mode{
+.dark-mode {
   width: 7%;
   height: 100%;
   display: flex;
@@ -66,22 +66,21 @@
   cursor: pointer;
   margin-right: 1rem;
 }
-.dark-mode span{
+.dark-mode span {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   height: 100%;
-
 }
-.dark-background{
+.dark-background {
   background-color: black;
   color: white;
 }
-.dark-background .search-bar-container{
+.dark-background .search-bar-container {
   color: rgb(15, 15, 15);
 }
-.item-container{
+.item-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,65 +90,62 @@
   transition: 1s;
   flex-wrap: wrap;
 }
-.item{
-  width:30%;
+.item {
+  width: 30%;
   height: 10rem;
   border-radius: 1rem;
   padding: 0.5rem;
-  border:1px solid rgb(168, 167, 167);
+  border: 1px solid rgb(168, 167, 167);
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: 1s;
   margin: 1rem;
 }
-.item span{
+.item span {
   cursor: pointer;
   color: rgb(206, 197, 197);
   border: rgb(56, 53, 53);
-  
 }
-.image-container{
+.image-container {
   width: 35%;
   height: 100%;
 }
-.image-container img{
+.image-container img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
 }
-.info-container{
+.info-container {
   width: 60%;
   height: 100%;
 }
-.info-container .name{
+.info-container .name {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 0.5rem;
 }
-.info-description{
+.info-description {
   display: flex;
   flex-direction: column;
   width: 100%;
- 
 }
-.description-top{
+.description-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 60%;
   color: rgb(160, 156, 156);
 }
-.description-bottom{
+.description-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 60%;
-
 }
-.episodes-button{
+.episodes-button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -157,12 +153,81 @@
   width: 50%;
   height: 20%;
   border-radius: 0.5rem;
-  margin-top:2.5rem;
+  margin-top: 2.5rem;
   float: right;
   color: black;
   cursor: pointer;
 }
-.dark-background .episodes-button{
-color: black;
+.dark-background .episodes-button {
+  color: black;
+}
+.episodes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 75vh;
+  overflow: hidden;
+  margin-top: 15rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.episodes-div {
+  position: absolute;
+  background-color: white;
+  width: 40vw;
+  height: 75vh;
+  padding: 1rem;
+}
+.episodes-header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-bottom: 1px solid rgb(185, 184, 184);
 }
 
+.episodes-header img {
+  height: 100%;
+  width: 2rem;
+  border-radius: 1rem;
+}
+.episodes-header .left {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+}
+.episodes-header .left span{
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.episodes-header .right {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+.episodes-header .right .close {
+  font-size: 1.4rem;
+  color:black;
+}
+.episodes-header .right .ep-num {
+  height: 100%;
+  width: 85%;
+  font-size: 1rem;
+  background-color: yellow;
+  border-radius: 0.5rem;
+  color: black;
+  padding: 0.2rem;
+}
