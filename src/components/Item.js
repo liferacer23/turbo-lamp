@@ -1,10 +1,14 @@
 import Episodes from "./Episodes";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {BsFillHeartFill} from 'react-icons/bs'
 import {GrFormNextLink} from 'react-icons/gr'
 import '../App.css';
+import { likeContext } from "../Helper/Context";
 export default function Item({flip,res}) {
     const [state,setState]=useState(false);
+    const {liked,setLiked}= useContext(likeContext);
+    const [like,setLike]=useState(false);
+
     return (
        
         <div className={`item ${flip ? 'dark-background' : ''}`}>
@@ -14,7 +18,7 @@ export default function Item({flip,res}) {
             <div className='info-container'>
                 <div className='name'>
                     <h4>{res.name}</h4>
-                    <span><BsFillHeartFill /></span>
+                    <span className={`like ${like?'ed':''}`} onClick={()=>{setLike(!like)}}><BsFillHeartFill /></span>
                 </div>
                 <div className="info-description">
                     <div className='description-top'>
