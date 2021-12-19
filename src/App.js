@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Nav from "./components/Nav";
+import ItemContainer from "./components/ItemContainer";
+import { useQuery, gql } from "@apollo/client";
+
+const CHARACTER_QUERY = gql`
+  query {
+    characters {
+      results {
+        id
+        name
+        species
+        origin {
+          id
+          name
+          type
+        }
+        image
+        episode {
+          id
+          name
+          air_date
+        }
+        created
+      }
+    }
+  }
+`;
 
 function App() {
+  const { data, loading, error } = useQuery(CHARACTER_QUERY);
+  const [flip, setFlip] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+
+  if (loading) {
+    return "Loading...";
+  }
+  else if (error) {
+    return error;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav setSearchTerm={setSearchTerm} flip={flip} setFlip={setFlip} />
+      <ItemContainer data={data.characters.results} searchTerm={searchTerm} flip={flip} />
+     
     </div>
   );
 }
