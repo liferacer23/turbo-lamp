@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/turbo-lamp/static/css/main.9ed8a0b7.css",
-    "main.js": "/turbo-lamp/static/js/main.b865879b.js",
+    "main.css": "/turbo-lamp/static/css/main.fedab976.css",
+    "main.js": "/turbo-lamp/static/js/main.eb8ac8f2.js",
     "static/js/787.ede64744.chunk.js": "/turbo-lamp/static/js/787.ede64744.chunk.js",
     "static/media/logo1.png": "/turbo-lamp/static/media/logo1.f71e55cd9b9d6a7624c6.png",
     "index.html": "/turbo-lamp/index.html",
-    "main.9ed8a0b7.css.map": "/turbo-lamp/static/css/main.9ed8a0b7.css.map",
-    "main.b865879b.js.map": "/turbo-lamp/static/js/main.b865879b.js.map",
+    "main.fedab976.css.map": "/turbo-lamp/static/css/main.fedab976.css.map",
+    "main.eb8ac8f2.js.map": "/turbo-lamp/static/js/main.eb8ac8f2.js.map",
     "787.ede64744.chunk.js.map": "/turbo-lamp/static/js/787.ede64744.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ed8a0b7.css",
-    "static/js/main.b865879b.js"
+    "static/css/main.fedab976.css",
+    "static/js/main.eb8ac8f2.js"
   ]
 }
