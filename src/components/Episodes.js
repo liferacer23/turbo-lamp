@@ -2,7 +2,7 @@ import Episode from "./Episode";
 import {BsFillHeartFill} from 'react-icons/bs'
 import {MdClose} from 'react-icons/md'
 import "../App.css";
-export default function Episodes({data,res,state,setState,flip}) {
+export default function Episodes({data,res,state,setState,flip,like, setLike}) {
     console.log(res)
     return (
         <div className={`episodes ${flip ? "dark-background" : ""}`}>
@@ -11,7 +11,7 @@ export default function Episodes({data,res,state,setState,flip}) {
                 <div className="left">
                     <img src={res.image} alt="" />
                     <h4> {res.name}</h4>
-                    <span><BsFillHeartFill /></span>
+                    <span className={`like ${like?'ed':''}`} onClick={()=>{setLike(!like)}}><BsFillHeartFill /></span>
                 </div>
                 <div className="right">
                     <span className="ep-num"><h4>{res.episode.length} Episodes</h4></span>

@@ -35,7 +35,7 @@ export default function Item({flip,res}) {
                     <span><GrFormNextLink /></span>
                 </div>
             </div>
-            {state?<Episodes flip={flip} state={state}setState={setState} res={res}/>:null}
+            {state?<Episodes like={like} setLiked={setLiked} flip={flip} state={state}setState={setState} res={res}/>:null}
         </div>
         
     )
