@@ -17,9 +17,8 @@ export default function ItemContainer({ flip, data,searchTerm }) {
         }
         
       }).map((res)=>{
-        console.log(res);
         return(
-      <Item key={res.id} res={res} flip={flip} />
+      <Item data={data} key={res.id} res={res} flip={flip} />
         )
     })}
     </div>

@@ -86,7 +86,7 @@
   justify-content: space-between;
   padding: 1rem;
   width: 100vw;
-  height: 90vh;
+  height: 250vh;
   transition: 1s;
   flex-wrap: wrap;
 }
@@ -162,27 +162,29 @@
   color: black;
 }
 .episodes {
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40vw;
   height: 75vh;
-  overflow: hidden;
+  overflow: scroll;
   margin-top: 15rem;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
   left: 0;
   right: 0;
   text-align: center;
+  border-radius: 1rem;
+  position: fixed;
+  overflow-x: hidden;
 }
 .episodes-div {
   position: absolute;
   background-color: white;
   width: 40vw;
-  height: 75vh;
+  height: 70vh;
   padding: 1rem;
 }
 .episodes-header {
@@ -205,29 +207,82 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: black;
 }
-.episodes-header .left span{
-  color: black;
+.episodes-header .left span {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .episodes-header .right {
-  width: 25%;
+  width: 29%;
   display: flex;
   justify-content: space-between;
 }
 .episodes-header .right .close {
-  font-size: 1.4rem;
-  color:black;
+  font-size: 1.5rem;
 }
 .episodes-header .right .ep-num {
   height: 100%;
-  width: 85%;
+  width: 80%;
   font-size: 1rem;
   background-color: yellow;
   border-radius: 0.5rem;
   color: black;
   padding: 0.2rem;
+}
+.dark-background {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+.episode-render {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.episode {
+  width: 48%;
+  height: 25%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(240, 209, 209);
+}
+.episode .title h5 {
+  width: 100%;
+  display: flex;
+  margin-left: 1rem;
+}
+.episode-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+.episode-info .episode-season{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 28%;
+}
+.episode-info .episode-season span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.episode-info .episode-date{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 48%;
+}
+.episode-info .episode-date span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
