@@ -179,6 +179,7 @@
   border-radius: 1rem;
   position: fixed;
   overflow-x: hidden;
+  background-color: white;
 }
 .episodes-div {
   position: absolute;
@@ -251,7 +252,7 @@
   border-radius: 1rem;
   border: 1px solid rgb(240, 209, 209);
 }
-.episode .title h5 {
+.episode .title h6 {
   width: 100%;
   display: flex;
   margin-left: 1rem;
@@ -285,4 +286,15 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(252, 246, 246);
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(95, 93, 93, 0.3);
 }

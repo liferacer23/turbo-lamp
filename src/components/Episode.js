@@ -7,7 +7,7 @@ export default function Episode({result}) {
   
         <div className='episode'>
             <div className='title'>
-                <h5>{result.name}</h5>
+                <h6>{result.name}</h6>
             </div>
             <div className="episode-info">
                 <div className="episode-season">
