@@ -32,20 +32,23 @@ function App() {
   const { data, loading, error } = useQuery(CHARACTER_QUERY);
   const [flip, setFlip] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [liked,setLiked]= useState([]);
+  const [liked, setLiked] = useState([]);
 
   if (loading) {
     return "Loading...";
-  }
-  else if (error) {
+  } else if (error) {
     return error;
   }
 
   return (
     <div className="App">
-      <likeContext.Provider value={liked, setLiked}>
-      <Nav setSearchTerm={setSearchTerm} flip={flip} setFlip={setFlip} />
-      <ItemContainer data={data.characters.results} searchTerm={searchTerm} flip={flip} />
+      <likeContext.Provider value={(liked, setLiked)}>
+        <Nav setSearchTerm={setSearchTerm} flip={flip} setFlip={setFlip} />
+        <ItemContainer
+          data={data.characters.results}
+          searchTerm={searchTerm}
+          flip={flip}
+        />
       </likeContext.Provider>
     </div>
   );

@@ -86,7 +86,8 @@
   justify-content: space-evenly;
   padding: 1rem;
   width: 100vw;
-  height: 250vh;
+  height: 100%;
+  overflow: scroll;
   transition: 1s;
   flex-wrap: wrap;
 }
@@ -257,31 +258,31 @@
   display: flex;
   margin-left: 1rem;
 }
-.episode-info{
+.episode-info {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 0.5rem;
 }
-.episode-info .episode-season{
+.episode-info .episode-season {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 28%;
 }
-.episode-info .episode-season span{
+.episode-info .episode-season span {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-.episode-info .episode-date{
+.episode-info .episode-date {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 48%;
 }
-.episode-info .episode-date span{
+.episode-info .episode-date span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,8 +300,8 @@
   box-shadow: inset 0 0 6px rgba(95, 93, 93, 0.3);
 }
 .item .info-container .ed {
-  color:yellow;
+  color: yellow;
 }
-.episodes .episodes-header .ed{
-  color:yellow;
+.episodes .episodes-header .ed {
+  color: yellow;
 }
