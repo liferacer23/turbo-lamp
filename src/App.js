@@ -41,7 +41,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={`App ${flip ? "dark-background" : ""}`}>
       <likeContext.Provider value={(liked, setLiked)}>
         <Nav setSearchTerm={setSearchTerm} flip={flip} setFlip={setFlip} />
         <ItemContainer
