@@ -89,6 +89,7 @@
   overflow: scroll;
   transition: 1s;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 .item {
   width: 30%;
